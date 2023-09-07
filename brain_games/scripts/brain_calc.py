@@ -5,8 +5,5 @@ def main():
     calc_game()
 
 
-
 if __name__ == "__name__":
     main()
-
-

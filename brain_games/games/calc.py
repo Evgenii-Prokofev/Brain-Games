@@ -12,7 +12,7 @@ def get_calculation(num1, num2, sign):
             return num1 - num2
         case '*':
             return num1 * num2
-    
+
 
 def get_expression():
     num_1, num_2 = choices(range(1, 50), k=2)

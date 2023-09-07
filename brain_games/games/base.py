@@ -14,7 +14,8 @@ def base_game(get_expression, event):
         if correct_answer == user_answer:
             print("Correct!")
         else:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(user_answer, correct_answer))
+            print("'{}' is wrong answer ;(. Correct answer was '{}'."
+                  .format(user_answer, correct_answer))
             print("Let's try again, {}!".format(name))
             return
     print("Congratulations, {}!".format(name))
