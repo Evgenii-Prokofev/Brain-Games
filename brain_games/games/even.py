@@ -18,7 +18,7 @@ def even_game():
             print("Let's try again, {}!".format(name))
             return
         if value % 2 == 0 and command == 'yes' or (
-                    value % 2 != 0 and command == 'no'):
+                value % 2 != 0 and command == 'no'):
             print('Correct!')
         else:
             print("Not correct answer!")
