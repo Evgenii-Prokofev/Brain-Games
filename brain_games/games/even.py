@@ -22,5 +22,6 @@ def even_game():
             print('Correct!')
         else:
             print("Not correct answer!")
+            print("Let's try again, {}!".format(name))
             return
     print('Congratulations, {}!'.format(name))
