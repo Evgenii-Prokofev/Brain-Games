@@ -1,5 +1,5 @@
 from random import choice, choices
-from brain_games.games.base import base_game
+from brain_games.engine import start_game
 
 event = 'What is the result of the expression?'
 
@@ -23,4 +23,4 @@ def get_expression():
 
 
 def calc_game():
-    base_game(get_expression, event)
+    start_game(get_expression, event)

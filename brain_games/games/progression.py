@@ -1,15 +1,15 @@
 from random import randint
-from brain_games.games.base import base_game
+from brain_games.engine import start_game
 
 
 event = 'What number is missing in the progression?'
 
 
-progression_length = 10
+PROGRESSION_LENGTH = 10
 
 
-def get_progression(start, step, progression_length):
-    stop = start + (progression_length * step)
+def get_progression(start, step, PROGRESSION_LENGTH):
+    stop = start + (PROGRESSION_LENGTH * step)
     progression = list(range(start, stop, step))
     return progression
 
@@ -17,8 +17,8 @@ def get_progression(start, step, progression_length):
 def get_expression():
     start = randint(1, 100)
     step = randint(1, 10)
-    missing_index = randint(1, progression_length - 1)
-    progression = get_progression(start, step, progression_length)
+    missing_index = randint(1, PROGRESSION_LENGTH - 1)
+    progression = get_progression(start, step, PROGRESSION_LENGTH)
     answer = progression.pop(missing_index)
     progression.insert(missing_index, "..")
     question = " ".join([str(i) for i in progression])
@@ -26,4 +26,4 @@ def get_expression():
 
 
 def progression_game():
-    base_game(get_expression, event)
+    start_game(get_expression, event)

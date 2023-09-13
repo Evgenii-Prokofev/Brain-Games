@@ -1,5 +1,5 @@
 from random import randint
-from brain_games.games.base import base_game
+from brain_games.engine import start_game
 
 
 event = 'Answer "yes" if given number is prime. Otherwise answer "no".'
@@ -22,4 +22,4 @@ def get_expression():
 
 
 def prime_game():
-    base_game(get_expression, event)
+    start_game(get_expression, event)

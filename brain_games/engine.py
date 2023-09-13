@@ -1,13 +1,14 @@
 import prompt
 
+TRIES_COUNT = 3
 
-def base_game(get_expression, event):
+
+def start_game(get_expression, event):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name}!')
     print(event)
-    tries_count = 3
-    for i in range(tries_count):
+    for i in range(TRIES_COUNT):
         question, correct_answer = get_expression()
         print("Question: {}".format(question))
         user_answer = input("Your answer: ")
