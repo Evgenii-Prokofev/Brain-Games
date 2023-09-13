@@ -18,7 +18,7 @@ def get_expression():
     num_1, num_2 = choices(range(1, 50), k=2)
     sign = choice(["+", "-", "*"])
     answer = get_calculation(num_1, num_2, sign)
-    question = "{} {} {}".format(num_1, sign, num_2)
+    question = f"{num_1} {sign} {num_2}"
     return question, str(answer)
 
 

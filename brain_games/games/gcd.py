@@ -17,7 +17,7 @@ def get_gcd(num1, num2):
 
 def get_expression():
     num1, num2 = choices(range(1, 50), k=2)
-    question = "{} {}".format(num1, num2)
+    question = f"{num1} {num2}"
     answer = get_gcd(num1, num2)
     return question, str(answer)
 
