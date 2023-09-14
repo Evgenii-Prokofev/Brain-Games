@@ -1,27 +1,19 @@
-import prompt
 from random import randint
+from brain_games.engine import start_game
 
 
-def even_game():
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
-    tries_count = 3
-    for i in range(tries_count):
-        value = randint(1, 100)
-        print('Question:', value)
-        print('You answer:', end='')
-        command = input()
-        if value % 2 != 0 and command == 'yes':
-            print("'yes' is wrong answer ;(. Correct answer was 'no'.")
-            print("Let's try again, {}!".format(name))
-            return
-        if value % 2 == 0 and command == 'yes' or (
-                value % 2 != 0 and command == 'no'):
-            print('Correct!')
-        else:
-            print("Not correct answer!")
-            print("Let's try again, {}!".format(name))
-            return
-    print('Congratulations, {}!'.format(name))
+GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
+def is_even(num):
+    return num % 2 == 0
+
+
+RANDOM_START = 1
+RANDOM_END = 100
+
+
+def get_answer_for_question():
+    question = randint(RANDOM_START, RANDOM_END)
+    answer = "yes" if is_even(question) else "no"
+    return question, answer

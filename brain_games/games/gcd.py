@@ -1,8 +1,8 @@
-from random import choices
+from random import randint
 from brain_games.engine import start_game
 
 
-event = 'Find the greatest common divisor of given numbers.'
+GAME_RULES = 'Find the greatest common divisor of given numbers.'
 
 
 def get_gcd(num1, num2):
@@ -15,12 +15,13 @@ def get_gcd(num1, num2):
     return num1 + num2
 
 
-def get_expression():
-    num1, num2 = choices(range(1, 50), k=2)
+RANDOM_START = 1
+RANDOM_END = 50
+
+
+def get_answer_for_question():
+    num1 = randint(RANDOM_START, RANDOM_END)
+    num2 = randint(RANDOM_START, RANDOM_END)
     question = f"{num1} {num2}"
     answer = get_gcd(num1, num2)
     return question, str(answer)
-
-
-def gcd_game():
-    start_game(get_expression, event)

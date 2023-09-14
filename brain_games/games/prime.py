@@ -2,7 +2,7 @@ from random import randint
 from brain_games.engine import start_game
 
 
-event = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(num):
@@ -15,11 +15,11 @@ def is_prime(num):
         return True
 
 
-def get_expression():
-    question = randint(1, 50)
+RANDOM_START = 1
+RANDOM_END = 50
+
+
+def get_answer_for_question():
+    question = randint(RANDOM_START, RANDOM_END)
     answer = "yes" if is_prime(question) else "no"
     return question, answer
-
-
-def prime_game():
-    start_game(get_expression, event)
