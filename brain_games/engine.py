@@ -15,8 +15,7 @@ def start_game(get_answer_for_question, GAME_RULES):
         if correct_answer.lower() != user_answer.lower():
             print(
                 f'"{user_answer}" is wrong answer ;(.'
-                f'Correct answer was "{correct_answer}".'
-                )
+                f'Correct answer was "{correct_answer}".')
             print(f"Let's try again, {name}!")
             return
         print("Correct!")
