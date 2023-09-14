@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.games.calc import *
+from brain_games.games import calc
+from brain_games.engine import start_game
 
 
 def main():
-    start_game(get_answer_for_question, GAME_RULES)
+    start_game(calc.get_answer_for_question, calc.GAME_RULES)
 
 
 if __name__ == "__name__":

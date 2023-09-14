@@ -1,5 +1,5 @@
 from random import choice, randint
-from brain_games.engine import start_game
+
 
 GAME_RULES = 'What is the result of the expression?'
 
